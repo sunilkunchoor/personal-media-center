@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="One place to access your all personal media files.">
+    <meta name="author" content="Sunil Kunchoor">
+    <meta name="generator" content="Jekyll v3.8.5">
+
+    <title>Personal Media Center</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="{{url_for('static',filename='css/bootstrap.min.css')}}" rel="stylesheet">
+    <link href="{{url_for('static',filename='css/bootstrap-grid.css')}}" rel="stylesheet">
+    <link rel="icon" href="{{url_for('static',filename='favicon.ico')}}">
+
+  </head>
+
+
+
+  <header>
+    <ul class="nav nav-pills">
+      <li role="presentation">
+        <div class="navbar-header" style:"float: left">
+          <a class="navbar-brand" href="/"><img style="max-width: 400px; margin: 5px" src={{url_for('static',filename='images/logo2.png')}}></a>
+        </div>
+      </li>
+      <li role="presentation" style="margin-top: 10px">
+        <div class="dropdown" style:"float: left">
+          <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+            Dropdown<span class="caret"></span>
+          </button>
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">Separated link</a></li>
+          </ul>
+        </div>
+      </li>
+    </ul>
+
+  </header>
+
+
+
+
+
+
+
+
+
+
+  <!-- JavaScript Files-->
+  <script src="{{url_for('static',filename='js/jquery-3.3.1.min.js')}}"></script>
+  <script src="{{url_for('static',filename='js/bootstrap.min.js')}}"></script>
+  <script src="{{url_for('static',filename='js/popper.min.js')}}"></script>
+
+
+
+
+
+</html>
