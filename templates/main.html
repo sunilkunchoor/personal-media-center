@@ -12,11 +12,18 @@
     <!-- Bootstrap core CSS -->
     <link href="{{url_for('static',filename='css/bootstrap.min.css')}}" rel="stylesheet">
     <link href="{{url_for('static',filename='css/bootstrap-grid.css')}}" rel="stylesheet">
+
+    <!-- Favicon -->
     <link rel="icon" href="{{url_for('static',filename='favicon.ico')}}">
 
+    <!-- Video Player -->
+    <link href="{{url_for('static',filename='css/player.css')}}" rel="stylesheet">
+
+    <!-- Popup -->
+    <link href="{{url_for('static',filename='css/popup.css')}}" rel="stylesheet">
+
+
   </head>
-
-
 
   <header>
     <ul class="nav nav-pills">
@@ -40,10 +47,46 @@
         </div>
       </li>
     </ul>
-
   </header>
 
+  <!-- Popup Window -->
+    <div id="myPopup" class="popup">
+      <!-- Popup content -->
+      <div class="popup-content">
+        <span class="close">&times;</span>
+    		<figure id="videoContainer" data-fullscreen="false">
+    			<video id="video" controls preload="metadata" poster="img/poster.jpg">
+    				<source src="kiladi.mp4" type="video/mp4">
+    			</video>
+    			<ul id="video-controls" class="controls">
+    				<li><button id="playpause" type="button">Play/Pause</button></li>
+    				<li><button id="stop" type="button">Stop</button></li>
+    				<li class="progress">
+    					<progress id="progress" value="0" min="0">
+    						<span id="progress-bar"></span>
+    					</progress>
+    				</li>
+    				<li><button id="mute" type="button">Mute/Unmute</button></li>
+    				<li><button id="volinc" type="button">Vol+</button></li>
+    				<li><button id="voldec" type="button">Vol-</button></li>
+    				<li><button id="fs" type="button">Fullscreen</button></li>
+    			</ul>
+    		</figure>
+      </div>
+    </div>
 
+  <table border=1>
+    <thead>
+      <th>Movies</th>
+    </thead>
+    <tbody>
+      {% for i in movie_list %}
+        <tr>
+          <td>{{ i }}<br><button class="myBtn" type="button">Click to play</button></td>
+         </tr>
+       {% endfor %}
+    </tbody>
+  </table>
 
 
 
@@ -56,7 +99,8 @@
   <script src="{{url_for('static',filename='js/jquery-3.3.1.min.js')}}"></script>
   <script src="{{url_for('static',filename='js/bootstrap.min.js')}}"></script>
   <script src="{{url_for('static',filename='js/popper.min.js')}}"></script>
-
+  <script src="{{url_for('static',filename='js/player.js')}}"></script>
+  <script src="{{url_for('static',filename='js/popup.js')}}"></script>
 
 
 
