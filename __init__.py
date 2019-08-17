@@ -1,5 +1,9 @@
 from flask import Flask, render_template
 import sys
+import os
+
+##os.system('cd venv/Scripts/ ')
+##os.system('activate ')
 
 app = Flask(__name__)
 
